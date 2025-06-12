@@ -38,7 +38,7 @@ test('Экшен: Проверка фильтрации', async ({ page }) => {
   const applyFilterButton = page.getByRole('button', { name: 'Показать' });
   const restaurantTab = page.getByRole('button', { name: 'Рестораны' });
 
-  // Act: Ввод текста в поле поиска и клик по кнопке поиска
+  // Act: Ввод текста в поле поиска и клик по кнопке поиска/
   await searchInput.fill('Пицца');
   await searchButton.click();
 
