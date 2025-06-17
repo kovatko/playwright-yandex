@@ -1,0 +1,107 @@
+{
+  "crossbrand_products": [
+    {
+      "place": {
+        "brand_slug": "vernyj",
+        "brand_name": "Верный",
+        "place_slug": "vernyj_chernyaxovskogo_17a_utqjn",
+        "color_overrides": {
+          "color": {
+            "light": "#D98582",
+            "dark": "#BC5753"
+          },
+          "logo_url": {
+            "light": [
+              {
+                "size": "large",
+                "logo_url": "https://testing.eda.tst.yandex.net/get-eda/69745/ed029e71aa65d94447055132adf8d0da/orig"
+              },
+              {
+                "size": "medium",
+                "logo_url": "https://testing.eda.tst.yandex.net/get-eda/69745/1516daf8624cd098c3e94bdc970233d9/orig"
+              },
+              {
+                "size": "small",
+                "logo_url": "https://eda.yandex/images/2415806/79fee589e3c0f49703c8a303551a020e.png"
+              }
+            ],
+            "dark": [
+              {
+                "size": "large",
+                "logo_url": "https://testing.eda.tst.yandex.net/get-eda/3925/b495f14432dda08c2c59ab67c6195b6a/orig"
+              },
+              {
+                "size": "medium",
+                "logo_url": "https://testing.eda.tst.yandex.net/get-eda/3925/b495f14432dda08c2c59ab67c6195b6a/orig"
+              },
+              {
+                "size": "small",
+                "logo_url": "https://eda.yandex/images/2415806/79fee589e3c0f49703c8a303551a020e.png"
+              }
+            ]
+          }
+        },
+        "currency": {
+          "code": "RUB",
+          "sign": "₽"
+        }
+      },
+      "product": {
+        "public_id": "1566ed63-f3b4-48bb-ae05-e51043d42c09",
+        "decimal_price": "34.00",
+        "decimal_promo_price": "17.00"
+      }
+    },
+    {
+      "place": {
+        "brand_slug": "magnit",
+        "brand_name": "Магнит",
+        "place_slug": "vernyj_1j_shhipkovskij_pereulok_3_ytduj",
+        "color_overrides": {
+          "color": {
+            "light": "#CC7A7F",
+            "dark": "#BA5359"
+          },
+          "logo_url": {
+            "light": [
+              {
+                "size": "large",
+                "logo_url": "https://testing.eda.tst.yandex.net/get-eda/3925/9cc16ba72a5c60d27e4f9e35a072f3c9/orig"
+              },
+              {
+                "size": "medium",
+                "logo_url": "https://testing.eda.tst.yandex.net/get-eda/3925/9cc16ba72a5c60d27e4f9e35a072f3c9/orig"
+              },
+              {
+                "size": "small",
+                "logo_url": "https://eda.yandex/images/3541746/86a0338aacf21d0a0fba5581e66aa86f.png"
+              }
+            ],
+            "dark": [
+              {
+                "size": "large",
+                "logo_url": "https://testing.eda.tst.yandex.net/get-eda/3925/9cc16ba72a5c60d27e4f9e35a072f3c9/orig"
+              },
+              {
+                "size": "medium",
+                "logo_url": "https://testing.eda.tst.yandex.net/get-eda/3925/9cc16ba72a5c60d27e4f9e35a072f3c9/orig"
+              },
+              {
+                "size": "small",
+                "logo_url": "https://eda.yandex/images/3541746/86a0338aacf21d0a0fba5581e66aa86f.png"
+              }
+            ]
+          }
+        },
+        "currency": {
+          "code": "RUB",
+          "sign": "₽"
+        }
+      },
+      "product": {
+        "public_id": "26a5da3f-c3d9-4962-b029-49f98825417d",
+        "decimal_price": "53.00"
+      }
+    }
+  ]
+}

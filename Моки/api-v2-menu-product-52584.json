@@ -1,0 +1,90 @@
+{
+  "menu_item": {
+    "id": 113995644,
+    "public_id": "ad9ce558-9134-4853-ab98-75c222d08b5b",
+    "name": "Вода питьевая Шишкин Лес Спорт негазированная",
+    "description": "Состав: вода питьевая первой категории негазированная из артезианских скважин №3 и №4<br>Срок хранения: 12 мес<br>Условия хранения: хранить при температуре +2°С до +20°С<br>Упаковка: Пластиковая бутылка<br>Страна производства: Россия",
+    "available": false,
+    "inStock": 0,
+    "price": 41,
+    "decimalPrice": "41.00",
+    "promoPrice": null,
+    "decimalPromoPrice": null,
+    "promoTypes": [],
+    "optionGroups": [],
+    "picture": {
+      "url": "https://avatars.mdst.yandex.net/get-eda/69745/c819c618380f02adbaa32b5ed6738ee8/{w}x{h}",
+      "scale": "aspect_fit"
+    },
+    "weight": "400 мл",
+    "adult": false,
+    "shippingType": "all"
+  },
+  "detailed_data": [
+    {
+      "payload": {
+        "pictures": [
+          {
+            "url": "https://avatars.mdst.yandex.net/get-eda/69745/c819c618380f02adbaa32b5ed6738ee8/{w}x{h}",
+            "scale": "aspect_fit"
+          }
+        ]
+      },
+      "type": "gallery"
+    },
+    {
+      "payload": {
+        "title": "О товаре"
+      },
+      "type": "header"
+    },
+    {
+      "payload": {
+        "descriptions": [
+          {
+            "title": "Состав",
+            "text": "вода питьевая первой категории негазированная из артезианских скважин №3 и №4"
+          },
+          {
+            "title": "Срок годности",
+            "text": "12 мес"
+          },
+          {
+            "title": "Условия хранения",
+            "text": "хранить при температуре +2°С до +20°С"
+          },
+          {
+            "title": "Страна",
+            "text": "Россия"
+          },
+          {
+            "title": "Бренд",
+            "text": "Шишкин лес"
+          },
+          {
+            "title": "Описание",
+            "text": "Состав: вода питьевая первой категории негазированная из артезианских скважин №3 и №4<br>Срок хранения: 12 мес<br>Условия хранения: хранить при температуре +2°С до +20°С<br>Упаковка: Пластиковая бутылка<br>Страна производства: Россия"
+          }
+        ]
+      },
+      "type": "description"
+    }
+  ],
+  "place": {
+    "currency": {
+      "code": "RUB",
+      "sign": "₽"
+    },
+    "brand_slug": "miratorg"
+  },
+  "categories": [
+    {
+      "id": "56",
+      "name": "Вода"
+    },
+    {
+      "id": "8355",
+      "name": "Тестовая категория "
+    }
+  ]
+}
