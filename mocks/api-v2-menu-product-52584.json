@@ -1,90 +1,297 @@
 {
-  "menu_item": {
-    "id": 113995644,
-    "public_id": "ad9ce558-9134-4853-ab98-75c222d08b5b",
-    "name": "Вода питьевая Шишкин Лес Спорт негазированная",
-    "description": "Состав: вода питьевая первой категории негазированная из артезианских скважин №3 и №4<br>Срок хранения: 12 мес<br>Условия хранения: хранить при температуре +2°С до +20°С<br>Упаковка: Пластиковая бутылка<br>Страна производства: Россия",
-    "available": false,
-    "inStock": 0,
-    "price": 41,
-    "decimalPrice": "41.00",
-    "promoPrice": null,
-    "decimalPromoPrice": null,
-    "promoTypes": [],
-    "optionGroups": [],
-    "picture": {
-      "url": "https://avatars.mdst.yandex.net/get-eda/69745/c819c618380f02adbaa32b5ed6738ee8/{w}x{h}",
-      "scale": "aspect_fit"
-    },
-    "weight": "400 мл",
-    "adult": false,
-    "shippingType": "all"
-  },
-  "detailed_data": [
-    {
-      "payload": {
-        "pictures": [
-          {
-            "url": "https://avatars.mdst.yandex.net/get-eda/69745/c819c618380f02adbaa32b5ed6738ee8/{w}x{h}",
-            "scale": "aspect_fit"
-          }
-        ]
-      },
-      "type": "gallery"
-    },
-    {
-      "payload": {
-        "title": "О товаре"
-      },
-      "type": "header"
-    },
-    {
-      "payload": {
-        "descriptions": [
-          {
-            "title": "Состав",
-            "text": "вода питьевая первой категории негазированная из артезианских скважин №3 и №4"
-          },
-          {
-            "title": "Срок годности",
-            "text": "12 мес"
-          },
-          {
-            "title": "Условия хранения",
-            "text": "хранить при температуре +2°С до +20°С"
-          },
-          {
-            "title": "Страна",
-            "text": "Россия"
-          },
-          {
-            "title": "Бренд",
-            "text": "Шишкин лес"
-          },
-          {
-            "title": "Описание",
-            "text": "Состав: вода питьевая первой категории негазированная из артезианских скважин №3 и №4<br>Срок хранения: 12 мес<br>Условия хранения: хранить при температуре +2°С до +20°С<br>Упаковка: Пластиковая бутылка<br>Страна производства: Россия"
-          }
-        ]
-      },
-      "type": "description"
-    }
-  ],
-  "place": {
-    "currency": {
-      "code": "RUB",
-      "sign": "₽"
-    },
-    "brand_slug": "miratorg"
-  },
-  "categories": [
-    {
-      "id": "56",
-      "name": "Вода"
-    },
-    {
-      "id": "8355",
-      "name": "Тестовая категория "
-    }
-  ]
+	"menu_item": {
+		"id": 0,
+		"uid": "f8ef02fc-62e7-4b4f-a7ef-f8945a1256b7",
+		"public_id": "f8ef02fc-62e7-4b4f-a7ef-f8945a1256b7",
+		"name": "Чипсы картофельные Lay's Ребрышки гриль",
+		"description": "Состав: картофель, растительные масла*, комплексная пищевая добавка [сахар, гидролизованный растительный белок (содержит сою), соль, специи (порошки лука и чеснока, черный и белый перец), усилители вкуса и аромата (глутамат натрия 1-замещенный, 5'-рибонуклеотиды натрия 2-замещенные), мука рожкового дерева, порошки зеленого сладкого перца и жареного лука, вкусо-ароматические вещества (содержат экстракт дрожжей), регулятор кислотности (лимонная кислота), краситель (экстракт паприки), экстракт кофе, говяжий порошок, коптильный ароматизатор]<br>Пищевая ценность на 100 г: белки 6 г, жиры 32 г, углеводы 53 г, энергетическая ценность 520 ккал<br>Срок хранения: 140 д<br>Условия хранения: хранить при температуре от 0°С до +25°С<br>Упаковка: Флоупак<br>Страна производства: Россия",
+		"available": false,
+		"inStock": 0,
+		"price": 119,
+		"decimalPrice": "119.00",
+		"promoPrice": null,
+		"decimalPromoPrice": null,
+		"promoTypes": [],
+		"optionGroups": [],
+		"picture": {
+			"url": "https://avatars.mdst.yandex.net/get-eda/3337779/f60b1d3c8ecadc2e8eb57e489e8e38b0/{w}x{h}",
+			"scale": null
+		},
+		"weight": "150 г",
+		"adult": false,
+		"shippingType": "all"
+	},
+	"detailed_data": [{
+		"payload": {
+			"pictures": [{
+				"url": "https://avatars.mdst.yandex.net/get-eda/3337779/f60b1d3c8ecadc2e8eb57e489e8e38b0/{w}x{h}",
+				"scale": null
+			}, {
+				"url": "https://avatars.mdst.yandex.net/get-eda/3925/694318bce775d951cd1836cf43766b96/{w}x{h}",
+				"scale": null
+			}]
+		},
+		"type": "gallery"
+	}, {
+		"payload": {
+			"themed_title": {
+				"value": "Чипсы картофельные Lay's Ребрышки гриль",
+				"color": {
+					"light": "#000000",
+					"dark": "#FFFFFF"
+				}
+			},
+			"themed_subtitle": {
+				"value": "150 г",
+				"color": {
+					"light": "#9E9B98",
+					"dark": "#9E9B98"
+				}
+			}
+		},
+		"type": "product_name"
+	}, {
+		"payload": {
+			"categories": [{
+				"name": "категория 5",
+				"meta": {
+					"category_id": "13236739",
+					"type": "category"
+				}
+			}, {
+				"name": "подкатегория 3",
+				"meta": {
+					"category_id": "13236742",
+					"type": "category"
+				}
+			}]
+		},
+		"type": "product_categories"
+	}, {
+		"type": "tiny_separator"
+	}, {
+		"title": "Подробнее о товаре",
+		"payload": {
+			"product_descriptions": [{
+				"title": "Состав",
+				"text": "картофель, растительные масла*, комплексная пищевая добавка [сахар, гидролизованный растительный белок (содержит сою), соль, специи (порошки лука и чеснока, черный и белый перец), усилители вкуса и аромата (глутамат натрия 1-замещенный, 5'-рибонуклеотиды натрия 2-замещенные), мука рожкового дерева, порошки зеленого сладкого перца и жареного лука, вкусо-ароматические вещества (содержат экстракт дрожжей), регулятор кислотности (лимонная кислота), краситель (экстракт паприки), экстракт кофе, говяжий порошок, коптильный ароматизатор]"
+			}, {
+				"title": "Срок годности",
+				"text": "140 д"
+			}, {
+				"title": "Условия хранения",
+				"text": "хранить при температуре от 0°С до +25°С"
+			}, {
+				"title": "Страна",
+				"text": "Россия"
+			}, {
+				"title": "Бренд",
+				"text": "Lay's"
+			}, {
+				"title": "Описание",
+				"text": "Состав: картофель, растительные масла*, комплексная пищевая добавка [сахар, гидролизованный растительный белок (содержит сою), соль, специи (порошки лука и чеснока, черный и белый перец), усилители вкуса и аромата (глутамат натрия 1-замещенный, 5'-рибонуклеотиды натрия 2-замещенные), мука рожкового дерева, порошки зеленого сладкого перца и жареного лука, вкусо-ароматические вещества (содержат экстракт дрожжей), регулятор кислотности (лимонная кислота), краситель (экстракт паприки), экстракт кофе, говяжий порошок, коптильный ароматизатор]<br>Пищевая ценность на 100 г: белки 6 г, жиры 32 г, углеводы 53 г, энергетическая ценность 520 ккал<br>Срок хранения: 140 д<br>Условия хранения: хранить при температуре от 0°С до +25°С<br>Упаковка: Флоупак<br>Страна производства: Россия"
+			}]
+		},
+		"type": "product_details"
+	}, {
+		"type": "separator"
+	}, {
+		"payload": {
+			"recommendations": [{
+				"title": "Что-нибудь ещё?",
+				"items": [{
+					"id": 0,
+					"uid": "66e0848d-7416-4ce2-85dd-28a6acf869ac",
+					"public_id": "66e0848d-7416-4ce2-85dd-28a6acf869ac",
+					"name": "Стейк из мраморной говядины Мираторг Денвер",
+					"description": "Состав: шея говяжья<br>Пищевая ценность на 100 г: белки 16 г, жиры 18 г, углеводы 0 г, энергетическая ценность 230 ккал<br>Срок хранения: 21 д<br>Условия хранения: хранить при температуре от -1.5°С до +4°С<br>Упаковка: Картонная коробка<br>Страна производства: Россия",
+					"available": true,
+					"inStock": 5,
+					"price": 1106,
+					"decimalPrice": "1106.00",
+					"promoPrice": 710,
+					"decimalPromoPrice": "710.00",
+					"promoTypes": [{
+						"id": 25,
+						"name": "Скидка для магазинов.",
+						"pictureUri": "https://avatars.mds.yandex.net/get-eda/1370147/5b73e9ea19587/80x80",
+						"text": "–35%",
+						"badgeColor": [{
+							"theme": "light",
+							"value": "#FF0000"
+						}, {
+							"theme": "dark",
+							"value": "#FF0000"
+						}],
+						"textColor": [{
+							"theme": "light",
+							"value": "#F8E5DF"
+						}, {
+							"theme": "dark",
+							"value": "#F8E5DF"
+						}],
+						"type": "price_discount"
+					}],
+					"optionGroups": [],
+					"picture": {
+						"url": "https://avatars.mdst.yandex.net/get-eda/3521394/313f76b496c2ab995df8463d294b1ad6/{w}x{h}",
+						"scale": null
+					},
+					"weight": "290 г",
+					"adult": false,
+					"shippingType": "all",
+					"promoted": {
+						"source": "advert"
+					},
+					"isHero": false
+				}, {
+					"id": 0,
+					"uid": "00eac83f-11bd-4edb-8e50-d52226f39504",
+					"public_id": "00eac83f-11bd-4edb-8e50-d52226f39504",
+					"name": "Корм для кошек Winner Extra meat с говядиной black angus в соусе",
+					"description": "",
+					"available": true,
+					"inStock": null,
+					"price": 35,
+					"decimalPrice": "35.00",
+					"promoPrice": null,
+					"decimalPromoPrice": null,
+					"promoTypes": [],
+					"optionGroups": [],
+					"picture": {
+						"url": "https://avatars.mdst.yandex.net/get-eda/69745/2356920a692ce6a88335aceb397a7107/{w}x{h}",
+						"scale": null
+					},
+					"weight": "80 г",
+					"adult": false,
+					"shippingType": "all",
+					"promoted": {
+						"source": "advert"
+					},
+					"isHero": false
+				}, {
+					"id": 0,
+					"uid": "f75293e6-82e5-4df8-8978-226ce145a2d0",
+					"public_id": "f75293e6-82e5-4df8-8978-226ce145a2d0",
+					"name": "Мясное пюре Тёма цыплёнок, с 6 месяцев",
+					"description": "Состав: Мясо цыплят, крупа рисовая, масло подсолнечное, вода.<br>Пищевая ценность на 100 г: белки 11 г, жиры 6 г, углеводы 4 г, энергетическая ценность 108 ккал<br>Срок хранения: 730 д<br>Условия хранения: Хранить при температуре от 0°C до +25°C и относительной влажности воздуха не более 75%.<br>Упаковка: Металлическая банка<br>Страна производства: Россия",
+					"available": true,
+					"inStock": 8,
+					"price": 79,
+					"decimalPrice": "79.00",
+					"promoPrice": null,
+					"decimalPromoPrice": null,
+					"promoTypes": [],
+					"optionGroups": [],
+					"picture": {
+						"url": "https://avatars.mdst.yandex.net/get-eda/3518584/da29e1d68dac73cac5d3854697c8572c/{w}x{h}",
+						"scale": null
+					},
+					"weight": "100 г",
+					"adult": false,
+					"shippingType": "all",
+					"promoted": {
+						"source": "advert"
+					},
+					"isHero": false
+				}, {
+					"id": 0,
+					"uid": "300ac795-50d1-4d72-9061-0d951283c264",
+					"public_id": "300ac795-50d1-4d72-9061-0d951283c264",
+					"name": "Стейк Мираторг Black Angus Prime Рибай из мраморной говядины",
+					"description": "Состав: говядина<br>Пищевая ценность на 100 г: белки 16 г, жиры 18 г, углеводы 0 г, энергетическая ценность 230 ккал<br>Срок хранения: 21 д<br>Условия хранения: хранить при температуре -1.5°С до +4°С<br>Упаковка: Контейнер<br>Страна производства: Россия",
+					"available": true,
+					"inStock": 3,
+					"price": 1699,
+					"decimalPrice": "1699.00",
+					"promoPrice": 1390,
+					"decimalPromoPrice": "1390.00",
+					"promoTypes": [{
+						"id": 25,
+						"name": "Скидка для магазинов.",
+						"pictureUri": "https://avatars.mds.yandex.net/get-eda/1370147/5b73e9ea19587/80x80",
+						"text": "–18%",
+						"badgeColor": [{
+							"theme": "light",
+							"value": "#FF0000"
+						}, {
+							"theme": "dark",
+							"value": "#FF0000"
+						}],
+						"textColor": [{
+							"theme": "light",
+							"value": "#F8E5DF"
+						}, {
+							"theme": "dark",
+							"value": "#F8E5DF"
+						}],
+						"type": "price_discount"
+					}, {
+						"id": 777,
+						"name": "in_stock_badge_counter",
+						"text": "ОСТАЛОСЬ 3",
+						"badgeColor": [{
+							"theme": "light",
+							"value": "#000000"
+						}, {
+							"theme": "dark",
+							"value": "#000000"
+						}],
+						"textColor": [{
+							"theme": "light",
+							"value": "#FFFFFF"
+						}, {
+							"theme": "dark",
+							"value": "#FFFFFF"
+						}],
+						"type": "information"
+					}],
+					"optionGroups": [],
+					"picture": {
+						"url": "https://avatars.mdst.yandex.net/get-eda/3925/fe2e5b900c8d8c7a375fafbdfcd6a02e/{w}x{h}",
+						"scale": null
+					},
+					"weight": "390 г",
+					"adult": true,
+					"shippingType": "all",
+					"promoted": {
+						"source": "advert"
+					},
+					"isHero": true
+				}]
+			}]
+		},
+		"type": "upsell_recommendations"
+	}, {
+		"type": "tiny_separator"
+	}, {
+		"payload": {
+			"title": "На 100 граммов"
+		},
+		"type": "header"
+	}, {
+		"payload": {
+			"energy_values": [{
+				"name": "белки",
+				"value": "6 г"
+			}, {
+				"name": "жиры",
+				"value": "32 г"
+			}, {
+				"name": "углеводы",
+				"value": "53 г"
+			}, {
+				"name": "ккал",
+				"value": "520"
+			}]
+		},
+		"type": "energy_values"
+	}],
+	"place": {
+		"currency": {
+			"code": "RUB",
+			"sign": "₽"
+		},
+		"brand_slug": "miratorg81020"
+	}
 }

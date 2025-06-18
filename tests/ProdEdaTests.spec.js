@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');
-
+const fs = require('fs');
 test.describe('Тесты для eda.yandex.ru', () => {
   // Arrange: Переход на главную страницу перед каждым тестом
   test.beforeEach(async ({ page }) => {
@@ -58,4 +58,96 @@ test('Экшен: Проверка фильтрации', async ({ page }) => {
   // Assert: Проверка, что вкладка "Рестораны" активна
   await expect(restaurantTab).toHaveAttribute('aria-current', 'true');
 });
+   test('[Desktop] Карточка товара без стоков', async ({ page }) => {
+    // Arrange: Подготовка - замокание API и локаторы
+    await page.on('request', request => {
+      if (request.url().includes('/api/v2/menu')) {
+        console.log('Запрос к API:', request.url());
+      }
+    });
+
+    await page.route('**/api/v2/menu/product*', async (route) => {
+      try {
+        const mockData = JSON.parse(fs.readFileSync('C:/Users/4702306/playwright-demo/mocks/api-v2-menu-product-52584.json'));
+        console.log('Перехвачен запрос /api/v2/menu/product:', route.request().url());
+        console.log('Мок /api/v2/menu/product:', mockData.menu_item.name, mockData.menu_item.available, mockData.menu_item.inStock);
+        await route.fulfill({ json: mockData });
+      } catch (error) {
+        console.error('Ошибка при чтении мока /api/v2/menu/product:', error.message);
+        await route.continue();
+      }
+    });
+
+    await page.route('**/api/v1/product/cross-brand-products', async (route) => {
+      try {
+        const mockData = JSON.parse(fs.readFileSync('C:/Users/4702306/playwright-demo/mocks/api-v1-product-cross-brand-products-52584.json'));
+        console.log('Перехвачен запрос /api/v1/product/cross-brand-products:', route.request().url());
+        await route.fulfill({ json: mockData });
+      } catch (error) {
+        console.error('Ошибка при чтении мока /api/v1/product/cross-brand-products:', error.message);
+        await route.continue();
+      }
+    });
+
+    const searchInput = page.getByRole('combobox', { name: 'Найти ресторан, блюдо или товар' });
+    const searchButton = page.getByRole('button', { name: 'Найти' });
+    const productCard = page.getByRole('button', { name: 'Вода артезианская Шишкин лес Спорт негазированная, 52, 1л' }).first();
+    const addToCartButton = page.getByRole('button', { name: /добавить/i }).first();
+    const checkoutButton = page.getByRole('button', { name: 'Оформить заказ' });
+    const otherStoresBlock = page.getByRole('region', { name: /в других магазинах/i });
+    const similarProducts = page.locator('[data-testid="similar-product"]');
+    const bestPriceLabel = similarProducts.first().locator('[data-testid="best-price-label"]');
+
+    // Act: Ввод текста в поле поиска и клик по кнопке поиска
+    await searchInput.waitFor({ state: 'visible', timeout: 10000 });
+    await searchInput.fill('Шишкин Лес');
+    await searchButton.click();
+
+    // Act: Установка адреса доставки
+    await page.getByRole('button', { name: 'Укажите адрес доставки' }).click();
+    await page.getByTestId('address-input').fill('Ленинский проспект 37а');
+    await page.getByLabel('Ленинский проспект, 37АМосква').click();
+    await page.getByTestId('desktop-location-modal-confirm-button').click();
+
+    // Act: Ожидание карточки товара
+    await productCard.waitFor({ state: 'visible', timeout: 15000 });
+    console.log('Найдено карточек:', await page.locator('[data-testid="product-card"]').count());
+
+    // Assert: Проверка, что текст поиска введен корректно
+    await expect(searchInput).toHaveValue('Шишкин Лес');
+
+    // Act: Открытие карточки товара
+    await productCard.click();
+    console.log('URL после клика:', page.url());
+
+    // Assert: Проверки карточки товара
+    await addToCartButton.waitFor({ state: 'visible', timeout: 10000 });
+    console.log('Текст кнопки:', await addToCartButton.textContent());
+    await expect(addToCartButton).toBeVisible();
+    await expect(addToCartButton).toBeDisabled();
+    await expect(checkoutButton).not.toBeVisible();
+    await expect(otherStoresBlock).toBeVisible();
+
+    const productCount = await similarProducts.count();
+    expect(productCount).toBe(2);
+
+    const stores = await similarProducts.evaluateAll((nodes) =>
+      nodes.map((node) => node.querySelector('[data-testid="store-name"]').textContent.trim())
+    );
+    const prices = await similarProducts.evaluateAll((nodes) =>
+      nodes.map((node) => parseFloat(node.querySelector('[data-testid="price"]').textContent.replace(/[^\d.]/g, '')))
+    );
+
+    expect(stores).toEqual(['Верный', 'Магнит']);
+    expect(prices).toEqual([17.00, 53.00]);
+    expect(prices).toEqual([...prices].sort((a, b) => a - b));
+    await expect(bestPriceLabel).toBeVisible();
+
+    // Act: Логи для отладки
+    console.log('Найдено похожих товаров:', productCount);
+    console.log('Магазины:', stores);
+    console.log('Цены:', prices);
+
+    await page.close();
+  });
 });
