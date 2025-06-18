@@ -58,7 +58,8 @@ test('Экшен: Проверка фильтрации', async ({ page }) => {
   // Assert: Проверка, что вкладка "Рестораны" активна
   await expect(restaurantTab).toHaveAttribute('aria-current', 'true');
 });
-   test('[Desktop] Карточка товара без стоков', async ({ page }) => {
+
+test('[Desktop] Карточка товара без стоков', async ({ page }) => {
     // Arrange: Подготовка - замокание API и локаторы
     await page.on('request', request => {
       if (request.url().includes('/api/v2/menu')) {
@@ -94,9 +95,9 @@ test('Экшен: Проверка фильтрации', async ({ page }) => {
     const productCard = page.getByRole('button', { name: 'Вода артезианская Шишкин лес Спорт негазированная, 52, 1л' }).first();
     const addToCartButton = page.getByRole('button', { name: /добавить/i }).first();
     const checkoutButton = page.getByRole('button', { name: 'Оформить заказ' });
-    const otherStoresBlock = page.getByRole('region', { name: /в других магазинах/i });
-    const similarProducts = page.locator('[data-testid="similar-product"]');
-    const bestPriceLabel = similarProducts.first().locator('[data-testid="best-price-label"]');
+    const otherStoresBlock = page.locator('div.CrossBrandProductsWidgetDesktop_root_r124jvvf').filter({ has: page.getByRole('heading', { name: 'В других магазинах' }) });
+    const similarProducts = page.locator('a.CrossBrandProductsWidgetDesktop_item_imugn97');
+    const bestPriceLabel = similarProducts.first().locator('.BetterPriceLabel_root_r1igs10f');
 
     // Act: Ввод текста в поле поиска и клик по кнопке поиска
     await searchInput.waitFor({ state: 'visible', timeout: 10000 });
@@ -132,10 +133,13 @@ test('Экшен: Проверка фильтрации', async ({ page }) => {
     expect(productCount).toBe(2);
 
     const stores = await similarProducts.evaluateAll((nodes) =>
-      nodes.map((node) => node.querySelector('[data-testid="store-name"]').textContent.trim())
+      nodes.map((node) => node.querySelector('.BrandProductItem_brandName_b1j7ivhi').textContent.trim())
     );
     const prices = await similarProducts.evaluateAll((nodes) =>
-      nodes.map((node) => parseFloat(node.querySelector('[data-testid="price"]').textContent.replace(/[^\d.]/g, '')))
+      nodes.map((node) => {
+        const priceElement = node.querySelector('.BrandProductItem_priceWrapper_pkdznfi [class*="UiKitPrice"]');
+        return priceElement ? parseFloat(priceElement.textContent.replace(/[^\d.]/g, '')) : 0;
+      })
     );
 
     expect(stores).toEqual(['Верный', 'Магнит']);
