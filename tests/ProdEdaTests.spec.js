@@ -6,7 +6,7 @@ test.describe('Тесты для eda.yandex.ru', () => {
     await page.goto('https://testing.eda.tst.yandex.ru/')
   });
 
-  // 1. Основные экшены
+  // 1. Основные экшены.
   test('Экшен: Клик по кнопке поиска', async ({ page }) => {
     // Arrange: Локатор для кнопки поиска
     const searchButton = page.getByRole('button', { name: 'Найти' });
