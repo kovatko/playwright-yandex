@@ -12,7 +12,7 @@ test.describe('Работа с базовыми чекбоксами', () => {
   // 4. Проверить что статус изменился на "Подписаны"
   // 5. Снять выбор методом uncheck()
   // 6. Проверить что статус вернулся к исходному
-  test.only('Изменение состояния чекбокса', async ({ page }) => {
+  test('Изменение состояния чекбокса', async ({ page }) => {
     const newsletterCheckbox = page.getByLabel('Подписаться на рассылку');
     const status = page.locator('#newsletter-status');
 
@@ -36,7 +36,7 @@ test.describe('Работа с базовыми чекбоксами', () => {
     const termsCheckbox = page.getByLabel('Я принимаю условия соглашения');
 
     await expect(termsCheckbox).toHaveAttribute('required', '');
-    // твой код
+    await termsCheckbox.check()
     await expect(termsCheckbox).toBeChecked();
   });
 });
@@ -56,7 +56,7 @@ test.describe('Сложные сценарии работы с check()', () => {
     const tosContainer = page.locator('.tos-container');
 
     await tosContainer.scrollIntoViewIfNeeded();
-    // твой код
+    await agreeCheckbox.check()
     await expect(agreeCheckbox).toBeChecked();
   });
 
