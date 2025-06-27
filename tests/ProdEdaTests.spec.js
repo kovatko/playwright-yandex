@@ -57,7 +57,7 @@ test('Экшен: Проверка фильтрации', async ({ page }) => {
   await filterButton.click();
 
   // Act: Выбор фильтра "Рестораны"
-  await restaurantFilter.waitFor({ state: 'visible', timeout: 5000 });
+  await restaurantFilter.waitFor({ state: 'visible', timeout: TIMEOUTS.SHORT });
   await restaurantFilter.check();
 
   // Act: Применение фильтров
@@ -99,7 +99,7 @@ test('[Desktop] Карточка товара без стоков', async ({ pag
     const bestPriceLabel = similarProducts.first().locator('.r1igs10f');
 
     // Act: Ввод текста в поле поиска и клик по кнопке поиска
-    await searchInput.waitFor({ state: 'visible', timeout: 10000 });
+    await searchInput.waitFor({ state: 'visible', timeout: TIMEOUTS.MEDIUM });
     await searchInput.fill('Шишкин Лес');
     await searchButton.click();
 
@@ -110,7 +110,7 @@ test('[Desktop] Карточка товара без стоков', async ({ pag
     await page.getByRole('button', {name: 'ОК', exact: true}).click();
 
     // Act: Ожидание карточки товара
-    await productCard.waitFor({ state: 'visible', timeout: 15000 });
+    await productCard.waitFor({ state: 'visible', timeout: TIMEOUTS.LONG });
 
     // Assert: Проверка, что текст поиска введен корректно
     await expect(searchInput).toHaveValue('Шишкин Лес');
@@ -119,7 +119,7 @@ test('[Desktop] Карточка товара без стоков', async ({ pag
     await productCard.click();
 
     // Assert: Проверки карточки товара
-    await addToCartButton.waitFor({ state: 'visible', timeout: 10000 });
+    await addToCartButton.waitFor({ state: 'visible', timeout: TIMEOUTS.MEDIUM });
     await expect(addToCartButton).toBeVisible();
     await expect(addToCartButton).toBeDisabled();
     await expect(checkoutButton).not.toBeVisible();
