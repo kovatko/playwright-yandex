@@ -12,11 +12,10 @@ test.describe('Базовые действия с кликами', () => {
   // 4. Повторить клики и проверки
   test('Обычный клик по кнопке увеличивает счетчик', async ({ page }) => {
     const button = page.getByText('Кликни меня', { exact: true });
-    // твой код
+    await button.click();
     await expect(page.getByText('Результат: 1 кликов')).toBeVisible();
-
-    // твой код
-    // твой код
+    await button.click();
+    await button.click();
     await expect(page.getByText('Результат: 3 кликов')).toBeVisible();
   });
 
@@ -27,7 +26,7 @@ test.describe('Базовые действия с кликами', () => {
   // 4. Повторить для проверки инкремента
   test('Двойной клик увеличивает специальный счетчик', async ({ page }) => {
     const dblClickArea = page.locator('#dblclick-area'); // Локатор для счетчика
-    // твой код
+    await dblClickArea.dblclick();
     await expect(dblClickArea).toContainText('1');
   });
 });
@@ -45,12 +44,12 @@ test.describe('Действия с правой кнопкой мыши', () => 
   // 5. Проверить текст подтверждения
   test('Правый клик открывает контекстное меню', async ({ page }) => {
     const rightClickArea = page.getByText('Кликни правой кнопкой');
-    // твой код
+    await rightClickArea.click({button: "right"});
 
     const contextMenu = page.getByText('Копировать').first();
     await expect(contextMenu).toBeVisible();
 
-    // твой код
+    await contextMenu.click();
     await expect(page.getByText('Выбрано: Копировать')).toBeVisible();
   });
 
